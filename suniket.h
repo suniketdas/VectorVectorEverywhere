@@ -1,7 +1,16 @@
 //This is Suniket's header file
-struct vector cross(struct vector a, struct vector b)
+#include "heman.h"
+void input( struct vector *a)
 {
-	struct vector c;
-	c={((a.2*b.3)-(a.3*b.2)),((a.3-b.1)-(a.1*b.3)),((a.1*b.2)-(a.2*b.1))};
+	printf("\nplease enter your i complonent ::");
+	scanf("%d",&(a->i));
+	printf("\nplease enter your j complonent ::");
+	scanf("%d",&(a->j));
+	printf("\nplease enter your k complonent ::");
+	scanf("%d",&(a->k));
+}
+ struct vector cross( struct vector a,  struct vector b)
+{
+	 struct vector c={((a.j*b.k)-(a.k*b.j)),((a.k*b.i)-(a.i*b.k)),((a.i*b.j)-(a.j*b.i))};
 	return c;
-};
+}
